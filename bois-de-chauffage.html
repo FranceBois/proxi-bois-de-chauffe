@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Proxi-Bois-De-Chauffe – bois de chauffage livré en France</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F5F2;--card:#fff;--ink:#2E211A;--mute:#6E5F55;--line:#DDD6CD;--ember:#B93A0B;--moss:#44603A;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1D1815;--card:#28211D;--ink:#F1EAE3;--mute:#B5A79C;--line:#41372F;--ember:#E2571F;--moss:#8DB27E}}
+:root[data-theme="dark"]{--bg:#1D1815;--card:#28211D;--ink:#F1EAE3;--mute:#B5A79C;--line:#41372F;--ember:#E2571F;--moss:#8DB27E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:0 16px 48px}
+h1,h2{font-family:Bitter,Georgia,serif;line-height:1.15;margin:0}
+h1{font-size:clamp(1.7rem,7vw,2.6rem);font-weight:800;margin:0 0 8px}
+h2{font-size:1.3rem;margin:32px 0 12px}
+.banner{margin:0 -16px 0;padding:34px 16px 30px;background:linear-gradient(180deg,#241A14,#3A2A1E);color:#F3EAE0;text-align:center;position:relative;overflow:hidden}
+.banner::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(255,255,255,.03) 0 2px,transparent 2px 26px)}
+.banner .tag{display:inline-flex;align-items:center;gap:6px;color:#F2A65A;font-weight:700;letter-spacing:.03em;font-size:.85rem;text-transform:uppercase}
+.banner h1{color:#fff;margin-top:6px}
+.banner .brand{color:var(--ember,#E2571F);color:#FF6A2E}
+.banner .sub{color:#D8C9BC;max-width:44ch;margin:10px auto 0}
+.banner .badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.banner .badges span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 12px;font-size:.82rem;font-weight:600}
+.lead{color:var(--mute);max-width:52ch;margin:14px 0 0}
+.priceGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+.priceGrid div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.priceGrid b{display:block;font-size:1.15rem;color:var(--ember)}
+.priceGrid small{color:var(--mute)}
+.calc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:18px}
+.qtyRow{display:flex;align-items:center;gap:10px}
+.qtyRow button{width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:1.3rem;cursor:pointer}
+.qtyRow input{width:70px;text-align:center;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:700 1.1rem inherit}
+label.f{display:block;font-weight:600;margin:14px 0 4px}
+input.t,textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.sum{margin-top:14px}
+.sum div{display:flex;justify-content:space-between;padding:3px 0}
+.sum .tot{border-top:1px solid var(--line);margin-top:6px;padding-top:8px;font-weight:800;font-size:1.2rem}
+.btnRow{display:flex;gap:10px;margin-top:16px}
+.btn{flex:1;display:block;padding:14px;border:0;border-radius:10px;background:var(--ember);color:#fff;font:700 1rem system-ui,sans-serif;cursor:pointer;text-align:center;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.note{color:var(--mute);font-size:.88rem;margin-top:10px}
+#err{color:var(--ember);font-weight:600;min-height:1.4em;margin-top:8px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+summary{font-weight:700;cursor:pointer}details p{margin:8px 0 0;color:var(--mute)}
+:focus-visible{outline:3px solid var(--moss);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="banner">
+<span class="tag">🔥 Chauffage naturel</span>
+<h1><span class="brand">Proxi</span>-Bois-De-Chauffe</h1>
+<p class="sub">Bois de chauffage sec, livré partout en France. Plus vous en prenez, moins vous payez le stère.</p>
+<div class="badges"><span>Livraison en France</span><span>Prix dégressif</span><span>Acompte 50%</span></div>
+</div>
+<main>
+<h2>Nos tarifs</h2>
+<div class="priceGrid">
+<div><b>60 €</b><small>1 à 4 stères</small></div>
+<div><b>55 €</b><small>5 à 9 stères</small></div>
+<div><b>50 €</b><small>10 à 29 stères</small></div>
+<div><b>45 €</b><small>30 à 49 stères</small></div>
+</div>
+<div class="priceGrid" style="grid-template-columns:1fr"><div><b>40 €</b><small>le stère à partir de 50 stères</small></div></div>
+<p class="note">Prix au stère, livraison en France incluse.</p>
+
+<h2>Faire une commande</h2>
+<div class="calc">
+<label class="f" for="qty">Nombre de stères</label>
+<div class="qtyRow">
+<button type="button" id="moins" aria-label="Moins">−</button>
+<input type="number" id="qty" min="1" value="1" inputmode="numeric">
+<button type="button" id="plus" aria-label="Plus">+</button>
+</div>
+
+<label class="f" for="nom">Nom et prénom</label><input class="t" id="nom" autocomplete="name">
+<label class="f" for="tel">Téléphone</label><input class="t" id="tel" type="tel" autocomplete="tel">
+<label class="f" for="adr">Adresse de livraison complète</label><textarea id="adr" rows="3" autocomplete="street-address"></textarea>
+
+<div class="sum" aria-live="polite">
+<div><span>Prix au stère</span><span id="sUnit">60 €</span></div>
+<div class="tot"><span>Total</span><span id="sTot">60 €</span></div>
+<div><span>Acompte à la commande (50 %)</span><span id="sAc">30 €</span></div>
+</div>
+<div id="err"></div>
+<div class="btnRow">
+<a class="btn" id="wa" href="#" role="button">Commander sur WhatsApp</a>
+<a class="btn alt" id="mail" href="#" role="button">Commander par e-mail</a>
+</div>
+<p class="note">Vous ne payez rien sur cette page. Nous vous confirmons le total, le délai et les coordonnées de paiement dès réception de votre demande.</p>
+</div>
+
+<h2>Questions fréquentes</h2>
+<details><summary>Comment se passe le paiement ?</summary><p>Un acompte de 50 % à la commande, par virement bancaire, et le solde à la livraison.</p></details>
+<details><summary>Combien de bûches dans un stère ?</summary><p>Un stère correspond à environ 1 m³ de bûches empilées. Pour un chauffage principal au bois, comptez souvent 6 à 10 stères par hiver.</p></details>
+<details><summary>Quel est le délai de livraison ?</summary><p>Nous confirmons le délai exact avec votre devis, selon votre adresse en France.</p></details>
+<details><summary>Puis-je voir des photos ou une vidéo avant de commander ?</summary><p>Bien sûr. Écrivez-nous par e-mail ou WhatsApp et nous vous les envoyons.</p></details>
+<details><summary>Que faire s'il y a un problème à la livraison ?</summary><p>Contactez-nous sur WhatsApp avec une photo dès la réception. Nous trouvons une solution avec vous.</p></details>
+</main>
+<script>
+var CONFIG={whatsapp:"33780991086",email:"proxiboisdechauffe@gmail.com"};
+var PALIERS=[[1,4,60],[5,9,55],[10,29,50],[30,49,45],[50,1e9,40]];
+var $=function(i){return document.getElementById(i)};
+var eur=function(v){return Math.round(v).toLocaleString("fr-FR")+" €"};
+function unit(q){for(var i=0;i<PALIERS.length;i++){if(q>=PALIERS[i][0]&&q<=PALIERS[i][1])return PALIERS[i][2]}return PALIERS[PALIERS.length-1][2]}
+function calc(){var q=Math.max(1,parseInt($("qty").value)||1);$("qty").value=q;var u=unit(q),t=u*q;$("sUnit").textContent=eur(u);$("sTot").textContent=eur(t);$("sAc").textContent=eur(t/2);return{q:q,u:u,t:t}}
+$("moins").addEventListener("click",function(){$("qty").value=Math.max(1,(parseInt($("qty").value)||1)-1);calc()});
+$("plus").addEventListener("click",function(){$("qty").value=(parseInt($("qty").value)||1)+1;calc()});
+$("qty").addEventListener("input",calc);
+function texte(c){return "Bonjour, je souhaite commander "+c.q+" stère(s) de bois de chauffage à "+eur(c.u)+"/stère, soit "+eur(c.t)+" (livraison en France incluse).\nNom : "+$("nom").value+"\nTéléphone : "+$("tel").value+"\nAdresse de livraison : "+$("adr").value}
+function ok(){if(!$("nom").value.trim()||!$("tel").value.trim()||!$("adr").value.trim()){$("err").textContent="Renseignez votre nom, votre téléphone et votre adresse.";return false}$("err").textContent="";return true}
+$("wa").addEventListener("click",function(e){e.preventDefault();var c=calc();if(!ok())return;window.open("https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(texte(c)),"_blank")});
+$("mail").addEventListener("click",function(e){e.preventDefault();var c=calc();if(!ok())return;location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Commande de bois de chauffage")+"&body="+encodeURIComponent(texte(c))});
+calc();
+</script>
+</body>
+</html>
