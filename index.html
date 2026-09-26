@@ -4,10 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Proxi-Bois-De-Chauffe – bois de chauffage livré en France</title>
+<meta name="description" content="Bois de chauffage sec, livré partout en France. Prix dégressif selon la quantité, acompte de 50% à la commande.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Proxi-Bois-De-Chauffe – bois de chauffage livré en France">
+<meta property="og:description" content="Bois de chauffage sec, livré partout en France. Prix dégressif selon la quantité, acompte de 50% à la commande.">
+<meta property="og:image" content="https://francebois.github.io/proxi-bois-de-chauffe/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://francebois.github.io/proxi-bois-de-chauffe/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Proxi-Bois-De-Chauffe – bois de chauffage livré en France">
+<meta name="twitter:description" content="Bois de chauffage sec, livré partout en France.">
+<meta name="twitter:image" content="https://francebois.github.io/proxi-bois-de-chauffe/og-image.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F6F5F2;--card:#fff;--ink:#2E211A;--mute:#6E5F55;--line:#DDD6CD;--ember:#B93A0B;--moss:#44603A;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1D1815;--card:#28211D;--ink:#F1EAE3;--mute:#B5A79C;--line:#41372F;--ember:#E2571F;--moss:#8DB27E}}
+:root{--bg:#FFFFFF;--card:#fff;--ink:#2E211A;--mute:#6E5F55;--line:#DDD6CD;--ember:#B93A0B;--moss:#44603A;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 :root[data-theme="dark"]{--bg:#1D1815;--card:#28211D;--ink:#F1EAE3;--mute:#B5A79C;--line:#41372F;--ember:#E2571F;--moss:#8DB27E}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -170,18 +181,12 @@ document.documentElement.setAttribute("data-theme",mode);
 $("modeLight").classList.toggle("active",mode==="light");
 $("modeDark").classList.toggle("active",mode==="dark");
 }
-function currentSystemMode(){
-return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";
-}
 try{
 var savedColor=localStorage.getItem("proxiBoisAccent");
 if(savedColor){applyColor(savedColor);$("themeColor").value=savedColor}
 var savedMode=localStorage.getItem("proxiBoisMode");
-if(savedMode){applyMode(savedMode)}else{
-document.getElementById("modeLight").classList.toggle("active",currentSystemMode()==="light");
-document.getElementById("modeDark").classList.toggle("active",currentSystemMode()==="dark");
-}
-}catch(e){}
+applyMode(savedMode==="dark"?"dark":"light");
+}catch(e){applyMode("light")}
 $("themeColor").addEventListener("input",function(){
 var hex=this.value;
 applyColor(hex);
@@ -198,9 +203,7 @@ try{localStorage.setItem("proxiBoisMode","dark")}catch(e){}
 $("themeReset").addEventListener("click",function(){
 applyColor(DEFAULT_COLOR);
 $("themeColor").value=DEFAULT_COLOR;
-document.documentElement.removeAttribute("data-theme");
-$("modeLight").classList.toggle("active",currentSystemMode()==="light");
-$("modeDark").classList.toggle("active",currentSystemMode()==="dark");
+applyMode("light");
 try{localStorage.removeItem("proxiBoisAccent");localStorage.removeItem("proxiBoisMode")}catch(e){}
 });
 </script>
